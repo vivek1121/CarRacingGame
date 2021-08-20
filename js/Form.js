@@ -29,5 +29,13 @@ class Form {
   display() {
     this.setElementsPosition();
     this.setElementsStyle();
+    this.playButton.mousePressed(()=>{
+      this.playButton.hide();
+      this.input.hide();
+      var message = `
+        Hello ${this.input.value()}
+        </br> waiting for another player to join....`
+        this.greeting.html(message)
+    })
   }
 }
